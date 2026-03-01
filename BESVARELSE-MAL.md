@@ -256,21 +256,16 @@ las
 
 **SQL for å opprette rolle:**
 
-```sql
-[Skriv din SQL-kode for å opprette rollen 'kunde' her]
-```
+Rolle: CREATE ROLE kunde;
 
 **SQL for å opprette bruker:**
 
-```sql
-[Skriv din SQL-kode for å opprette brukeren 'kunde_1' her]
-```
+Bruker: CREATE USER kunde_1 WITH PASSWORD 'passord123';
+
 
 **SQL for å tildele rettigheter:**
 
-```sql
-[Skriv din SQL-kode for å tildele rettigheter til rollen her]
-```
+Rettigheter: GRANT SELECT ON utleie TO kunde; GRANT kunde TO kunde_1;
 
 ---
 
