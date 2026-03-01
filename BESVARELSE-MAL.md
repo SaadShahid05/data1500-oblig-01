@@ -368,6 +368,8 @@ Det er litt tregere en B+-tree for range-søk, men funker greit fordi looging ik
 
 ### Oppgave 4.4: Validering i flerlags-systemer
 
+Jeg skjønte ikke denne oppgaven
+
 **Hvor bør validering gjøres:**
 
 [Skriv ditt svar her - argumenter for validering i ett eller flere lag]
@@ -394,21 +396,21 @@ Det er litt tregere en B+-tree for range-søk, men funker greit fordi looging ik
 
 **Hva har du lært så langt i emnet:**
 
-[Skriv din refleksjon her - diskuter sentrale konsepter du har lært]
+Jeg har lært å lage ER-modeller, normalisere databaser, bruke PK/FK og constraints. Har fått forståelse for forskjellen på flat fil vs. relasjonsdatabase. Lært litt om indekser, logging, og tilgangskontroll (roller og brukere).
 
 **Hvordan har denne oppgaven bidratt til å oppnå læringsmålene:**
 
-[Skriv din refleksjon her - koble oppgaven til læringsmålene i emnet]
+Oppgaven har hjulpet meg å koble teori til praksis: lage tabeller, constraints, normalisering, SQL-skript og brukerkontroll. Jeg fikk erfaring med å tenke på ytelse (indekser) og datasikkerhet (roller/VIEW).
 
 Se oversikt over læringsmålene i en PDF-fil i Canvas https://oslomet.instructure.com/courses/33293/files/folder/Plan%20v%C3%A5ren%202026?preview=4370886
 
 **Hva var mest utfordrende:**
 
-[Skriv din refleksjon her - diskuter hvilke deler av oppgaven som var mest krevende]
+Å finne riktig nivå på normalisering (3NF). Lage FK som ikke krasjer når man setter inn testdata. Små syntax-feil i SQL som tok tid å finne
 
 **Hva har du lært om databasedesign:**
 
-[Skriv din refleksjon her - reflekter over prosessen med å designe en database fra bunnen av]
+Viktig å starte med entiteter og attributter. Planlegg primær- og fremmednøkler nøye. Normalisering hjelper på redundans og inkonsistens. Test alltid med litt realistisk data, små feil skjer hele tiden
 
 ---
 
