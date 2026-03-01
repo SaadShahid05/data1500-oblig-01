@@ -210,9 +210,11 @@ skjønte ikke denne
 
 **Plassering av SQL-skript:**
 
-[Bekreft at du har lagt SQL-skriptet i `init-scripts/01-init-database.sql`]
+[Bekreft at du har lagt SQL-skriptet i `init-scripts/01-init-database.sql`] Yes den ligger der nå
 
 **Antall testdata:**
+
+skjønte ikke oppgaven
 
 - Kunder: [antall]
 - Sykler: [antall]
@@ -226,7 +228,7 @@ skjønte ikke denne
 
 **Dokumentasjon av vellykket kjøring:**
 
-[Skriv ditt svar her - f.eks. skjermbilder eller output fra terminalen som viser at databasen ble opprettet uten feil]
+Dokumentasjon: “Jeg kjørte skriptet i docker-compose. Fikk ‘CREATE TABLE’ på alle tabeller og til slutt ‘Database initialisert!!’”
 
 **Spørring mot systemkatalogen:**
 
@@ -240,9 +242,11 @@ ORDER BY table_name;
 
 **Resultat:**
 
-```
-[Skriv resultatet av spørringen her - list opp alle tabellene som ble opprettet]
-```
+kunde
+sykkel
+sykkelstasjon
+utleie
+las
 
 ---
 
