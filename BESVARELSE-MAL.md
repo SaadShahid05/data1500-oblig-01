@@ -62,15 +62,77 @@ status
 
 **Valgte datatyper og begrunnelser:**
 
-[Skriv ditt svar her - forklar hvilke datatyper du har valgt for hver attributt og hvorfor]
+Primærnøkler:
+INTEGER (SERIAL)
+Jeg valgte dette fordi det er enkelt og fungerer bra i Postgres.
+
+fornavn, etternavn:
+VARCHAR(50)
+Virker som passe lengde.
+
+epost:
+VARCHAR(100)
+Kunne kanskje hatt 150, men 100 holder i de fleste tilfeller.
+
+telefon:
+VARCHAR(15)
+Siden det kan være +47 osv.
+
+status:
+VARCHAR(20)
+Brukes for å lagre f.eks. "ledig", "utleid", "defekt".
+
+pris:
+NUMERIC(8,2)
+Valgte NUMERIC i stedet for FLOAT for å unngå avrundingsfeil.
+
+start_tid og slutt_tid:
+TIMESTAMP
+
+kapasitet:
+INTEGER
 
 **`CHECK`-constraints:**
 
-[Skriv ditt svar her - list opp alle CHECK-constraints du har lagt til og forklar hvorfor de er nødvendige]
+kapasitet > 0
+pris >= 0
+slutt_tid > start_tid
+status IN ('ledig', 'utleid', 'defekt')
+Jeg er litt usikker på om status burde vært egen tabell i stedet, men valgte CHECK for enkelhet
 
 **ER-diagram:**
 
-[Legg inn mermaid-kode eller eventuelt en bildefil fra `mermaid.live` her]
+Jeg klarte ikke å løse hele oppgaven, men dette er det jeg klarte å gjøre:
+KUNDE:
+kunde_id (PK)
+fornavn
+etternavn
+epost
+
+SYKKEL:
+sykkel_id (PK)
+serienummer
+status
+stasjon_id (FK)
+
+SYKKELSTASJON:
+stasjon_id (PK)
+navn
+adresse
+kapasitet
+
+LÅS:
+lås_id (PK)
+sykkel_id (FK)
+status
+
+UTLEIE:
+utleie_id (PK)
+kunde_id (FK)
+sykkel_id (FK)
+start_tid
+slutt_tid
+pris
 
 ---
 
