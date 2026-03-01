@@ -4,7 +4,7 @@
 
 **Studentnummer:** [Ditt studentnummer]
 
-**Dato:** [Innleveringsdato]
+**Dato:** 01.03.2026
 
 ---
 
@@ -151,11 +151,12 @@ Jeg vurderte å bruke epost som naturlig nøkkel, men det kan endres, så det er
 
 **Naturlige vs. surrogatnøkler:**
 
-[Skriv ditt svar her - diskuter om du har brukt naturlige eller surrogatnøkler og hvorfor]
+Jeg har brukt surrogatnøkler nesten overalt. Det gjør joins enklere og mer effektivt.
+Ulempen er at de ikke har noen “mening” i seg selv.
 
 **Oppdatert ER-diagram:**
 
-[Legg inn mermaid-kode eller eventuelt en bildefil fra `mermaid.live` her]
+skjønte ikke denne 
 
 ---
 
@@ -163,15 +164,23 @@ Jeg vurderte å bruke epost som naturlig nøkkel, men det kan endres, så det er
 
 **Identifiserte forhold og kardinalitet:**
 
-[Skriv ditt svar her - list opp alle forholdene mellom entitetene og angi kardinalitet]
+Forhold:
+En kunde kan ha mange utleier
+En sykkel kan brukes i mange utleier (over tid)
+En stasjon har mange sykler
+En sykkel har én lås
 
 **Fremmednøkler:**
 
-[Skriv ditt svar her - list opp alle fremmednøklene og forklar hvordan de implementerer forholdene]
+Fremmednøkler:
+utleie.kunde_id → kunde.kunde_id
+utleie.sykkel_id → sykkel.sykkel_id
+sykkel.stasjon_id → sykkelstasjon.stasjon_id
+lås.sykkel_id → sykkel.sykkel_id
 
 **Oppdatert ER-diagram:**
 
-[Legg inn mermaid-kode eller eventuelt en bildefil fra `mermaid.live` her]
+skjønte ikke denne
 
 ---
 
@@ -179,11 +188,11 @@ Jeg vurderte å bruke epost som naturlig nøkkel, men det kan endres, så det er
 
 **Vurdering av 1. normalform (1NF):**
 
-[Skriv ditt svar her - forklar om datamodellen din tilfredsstiller 1NF og hvorfor]
+1NF fordi kolonnene inneholder atomiske verdier
 
 **Vurdering av 2. normalform (2NF):**
 
-[Skriv ditt svar her - forklar om datamodellen din tilfredsstiller 2NF og hvorfor]
+2NF fordi hver tabell bruker engel primærnøkkel og derfor er det ikke delvis avhengig
 
 **Vurdering av 3. normalform (3NF):**
 
@@ -191,7 +200,7 @@ Jeg vurderte å bruke epost som naturlig nøkkel, men det kan endres, så det er
 
 **Eventuelle justeringer:**
 
-[Skriv ditt svar her - hvis modellen ikke var på 3NF, forklar hvilke justeringer du har gjort]
+3NF fordi det ikke er noen transitive avhengiheter da f.eks stasjonsavn ikke lagres i Sykkel
 
 ---
 
