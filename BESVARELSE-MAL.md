@@ -416,6 +416,8 @@ Viktig å starte med entiteter og attributter. Planlegg primær- og fremmednøkl
 
 ## Del 5: SQL-spørringer og Automatisk Testing
 
+Jeg skjønte ikke denne oppgaven
+
 **Plassering av SQL-spørringer:**
 
 [Bekreft at du har lagt SQL-spørringene i `test-scripts/queries.sql`]
@@ -423,7 +425,6 @@ Viktig å starte med entiteter og attributter. Planlegg primær- og fremmednøkl
 
 **Eventuelle feil og rettelser:**
 
-Første forsøk: datatype på pris var FLOAT -> endret til NUMERIC(8,2). Indeks-navn krasjet med eksisterende -> endret navn på indeks. Små skrivefeil i kolonnenavn (f.eks. slutt_tid ble først sluttid) -> rettet
 
 ---
 
