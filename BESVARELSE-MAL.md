@@ -103,6 +103,7 @@ Jeg er litt usikker på om status burde vært egen tabell i stedet, men valgte C
 **ER-diagram:**
 
 Jeg klarte ikke å løse hele oppgaven, men dette er det jeg klarte å gjøre:
+
 KUNDE:
 kunde_id (PK)
 fornavn
@@ -140,7 +141,13 @@ pris
 
 **Valgte primærnøkler og begrunnelser:**
 
-[Skriv ditt svar her - forklar hvilke primærnøkler du har valgt for hver entitet og hvorfor]
+kunde_id
+sykkel_id
+stasjon_id
+lås_id
+utleie_id
+
+Jeg vurderte å bruke epost som naturlig nøkkel, men det kan endres, så det er ikke så lurt.
 
 **Naturlige vs. surrogatnøkler:**
 
