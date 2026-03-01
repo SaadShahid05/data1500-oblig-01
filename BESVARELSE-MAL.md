@@ -423,7 +423,7 @@ Viktig å starte med entiteter og attributter. Planlegg primær- og fremmednøkl
 
 **Eventuelle feil og rettelser:**
 
-[Skriv ditt svar her - hvis noen tester feilet, forklar hva som var feil og hvordan du rettet det]
+Første forsøk: datatype på pris var FLOAT -> endret til NUMERIC(8,2). Indeks-navn krasjet med eksisterende -> endret navn på indeks. Små skrivefeil i kolonnenavn (f.eks. slutt_tid ble først sluttid) -> rettet
 
 ---
 
