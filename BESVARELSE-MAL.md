@@ -273,12 +273,14 @@ Rettigheter: GRANT SELECT ON utleie TO kunde; GRANT kunde TO kunde_1;
 
 **SQL for VIEW:**
 
-```sql
-[Skriv din SQL-kode for VIEW her]
-```
+CREATE VIEW mine_utleier AS
+SELECT *
+FROM utleie
+WHERE kunde_id = 1;  -- enkel studentversjon
 
 **Ulempe med VIEW vs. POLICIES:**
 
+Jeg vet ikke svaret på denne
 [Skriv ditt svar her - diskuter minst én ulempe med å bruke VIEW for autorisasjon sammenlignet med POLICIES]
 
 ---
@@ -296,14 +298,15 @@ Rettigheter: GRANT SELECT ON utleie TO kunde; GRANT kunde TO kunde_1;
 **Totalt antall utleier per år:**
 
 [Skriv din utregning her]
+20000×5 + 5000×4 + 500×3 = 121500
 
 **Estimat for lagringskapasitet:**
 
-[Skriv din utregning her - vis hvordan du har beregnet lagringskapasiteten for hver tabell]
+ca 12mb kanskje
 
 **Totalt for første år:**
 
-[Skriv ditt estimat her]
+tror det kanskje er sånn 20-25mb
 
 ---
 
@@ -313,19 +316,19 @@ Rettigheter: GRANT SELECT ON utleie TO kunde; GRANT kunde TO kunde_1;
 
 **Problem 1: Redundans**
 
-[Skriv ditt svar her - gi konkrete eksempler fra CSV-filen som viser redundans]
+Kundeinfo gjentas i hver rad
 
 **Problem 2: Inkonsistens**
 
-[Skriv ditt svar her - forklar hvordan redundans kan føre til inkonsistens med eksempler]
+Telefon endres, må oppdateres flere steder
 
 **Problem 3: Oppdateringsanomalier**
 
-[Skriv ditt svar her - diskuter slette-, innsettings- og oppdateringsanomalier]
+slette-, innsettings-, oppdateringsanomalier
 
 **Fordeler med en indeks:**
 
-[Skriv ditt svar her - forklar hvorfor en indeks ville gjort spørringen mer effektiv]
+Raskere søk på kunde_id
 
 **Case 1: Indeks passer i RAM**
 
@@ -345,17 +348,21 @@ Rettigheter: GRANT SELECT ON utleie TO kunde; GRANT kunde TO kunde_1;
 
 **Foreslått datastruktur:**
 
-[Skriv ditt svar her - f.eks. heap-fil, LSM-tree, eller annen egnet datastruktur]
+LSM-tree
 
 **Begrunnelse:**
 
+Passer bra når man har mange skrive-operasjoner.
+Skriver først i minne, så flettes det til disk senere
+
 **Skrive-operasjoner:**
 
-[Skriv ditt svar her - forklar hvorfor datastrukturen er egnet for mange skrive-operasjoner]
+Håndteres veldig effektivt fordi nye logging-events først legges i minnet (memtable)
 
 **Lese-operasjoner:**
 
-[Skriv ditt svar her - forklar hvordan datastrukturen håndterer sjeldne lese-operasjoner]
+Lesepårasjoner er mer sjelden, men da det skjer leses det fra minne og disk som kalles for merge.
+Det er litt tregere en B+-tree for range-søk, men funker greit fordi looging ikke skjer ofte i sanntid.
 
 ---
 
