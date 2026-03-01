@@ -14,11 +14,47 @@
 
 **Identifiserte entiteter:**
 
-[Skriv ditt svar her - list opp alle entitetene du har identifisert]
+Utleie
+Sykkel
+Sykkelstasjon
+Kunde
+Lås
 
 **Attributter for hver entitet:**
 
-[Skriv ditt svar her - list opp attributtene for hver entitet]
+Utleie:
+utleie_id
+kunde_id (FK)
+sykkel_id (FK)
+start_tid
+slutt_tid
+pris
+
+Sykkel:
+sykkel_id
+serienummer
+modell
+status
+stasjon_id
+
+Sykkelstasjon:
+stasjon_id
+navn
+adresse
+kapasitet
+
+Kunde:
+kunde_id
+fornavn
+etternavn
+epost
+telefon
+registrert_dato
+
+Lås:
+lås_id
+sykkel_id
+status
 
 ---
 
